@@ -64,11 +64,16 @@ echo "I am a $con"; // I am a worker
 echo "<br>";
 echo 'I am a $con'; // I am a worker
 echo "<br>";
-echo `I am a $con`; // I am a $con
+echo `I am a $con`; // `I am a $con` Виконує shell-команду, так як такої команди не існує - нічого не виводиться
 echo "<br>";
 
-
-
+// !Константа
+define('PI', '3,14'); // case sensetive
+echo(PI);
+echo "<br>";
+define('echo','echo text');
+// echo(echo); // error
+echo(constant('echo'));
 ?>
 
 

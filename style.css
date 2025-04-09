@@ -184,3 +184,11 @@ main {
   color: white;
   cursor: pointer;
 }
+.accordion-menu__item-header {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+  padding: 5px 0;
+  color: rgb(250, 238, 255);
+}
