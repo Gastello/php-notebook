@@ -192,3 +192,12 @@ main {
   padding: 5px 0;
   color: rgb(250, 238, 255);
 }
+
+.playground__header {
+  display: block;
+  background-color: #2e2e2e;
+  color: #ff0000;
+  padding: 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+}
