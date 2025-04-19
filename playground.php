@@ -324,7 +324,106 @@ echo match ($someInt) {
   1 => 'is 1',
   2 => 'is 2',
   default => 'is empty'
+};
+
+// !Арифметичні операції
+echo("<div class='playground__header'>Арифметичні операції:</div>");
+$a = 12;
+$b = 3;
+echo $a + $b;
+echo("<br>");
+echo $a - $b;
+echo("<br>");
+echo $a * $b;
+echo("<br>");
+echo $a / $b;
+echo("<br>");
+echo $a ** $b;
+echo("<br>");
+echo pow($a, $b);
+echo("<br>");
+$a = 5;
+$b = $a++;
+echo($b);
+echo("<br>");
+
+$a = 5;
+$b = ++$a;
+echo($b);
+echo("<br>");
+
+$a = 11;
+$b = 10;
+echo $a%$b;
+echo("<br>");
+
+$a = 10;
+$c = &$a;
+$a = 0;
+echo $c;
+echo("<br>");
+
+// !Цикли
+echo("<div class='playground__header'>Цикли:</div>");
+for($a=1;$a<=5;$a++){
+  echo $a;
+} 
+echo("<br>");
+for($a=5;$a>0;--$a){
+  echo $a;
+} 
+echo("<br>");
+for($a=1;$a<=5;$a++){
+  if($a==2) continue;
+  echo $a;
+} 
+echo("<br>");
+for($a=1;$a<=5;$a++){
+  if($a==2) break;
+  echo $a;
+} 
+echo("<br>");
+$arr = [1,2,3,4,5];
+for($i=0;$i<count($arr);$i++){
+  echo $arr[$i];
+} 
+echo("<br>");
+
+$num = 3;
+while($num){
+  $num--;
+  echo $num;
 }
+echo("<br>");
+
+$num = 0;
+do {
+  echo $num;
+} while($num);
+echo("<br>");
+
+$arr = [0,1,2,3,4];
+foreach($arr as $el){
+  echo $el;
+}
+echo("<br>");
+
+$arr = [1,2,3];
+foreach($arr as &$el){
+  $el*=2;
+}
+var_dump($arr);
+echo("<br>");
+
+$fruits = [
+  'a' => 'apple',
+  'b' => 'banana',
+  'c' => 'cherry'
+];
+foreach($fruits as $key => $value){
+  echo($key . ' ' . $value . '<br>');
+}
+echo("<br>");
 
 ?>
 </div>
