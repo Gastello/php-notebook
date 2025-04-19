@@ -203,7 +203,7 @@ $person = array("name"=>"Max", 'age'=>22, 'isStudent'=>false);
 
 echo sizeof($fruits); // 3
 echo("<br>");
-echo sizeof($fruits); // 3
+echo count($fruits); // 3
 echo("<br>");
 echo $fruits[1]; // pineapple
 echo("<br>");
@@ -259,9 +259,74 @@ public 'age' => int 16
 echo("<div class='playground__header'>Тип данних Resource:</div>");
 $file = fopen('./test.txt', 'read');
 var_dump($file); // C:\wamp64\www\php-notebook\playground.php:261:resource(4, stream)
+
+// !If else
+echo("<div class='playground__header'>If else:</div>");
+$someInt = 2;
+$someText = '2';
+if($someInt == 2){
+  echo("Integer = 2");
+}
+elseif(is_int($someInt)) {
+  echo("It is integer: {$someInt}");
+}
+else{
+  echo("It is not integer: {$someInt}");
+}
+echo("<br>");
+if($someInt == $someText){
+  echo("{$someInt}=={$someText}");
+}
+echo("<br>");
+if($someInt === $someText){
+  echo("{$someInt}==={$someText}");
+}
+else {
+  echo("{$someInt}!=={$someText}");
+}
+echo("<br>");
+if($someInt !== $someText){
+  echo("{$someInt}!=={$someText}");
+}
+else {
+  echo("{$someInt}==={$someText}");
+}
+
+echo("<br>");
+if($someInt>0 and $someInt<5){
+  echo("0<{$someInt}<5");
+}
+
+echo("<br>"); 
+// !Тернарні оператори
+echo("<div class='playground__header'>Тернарні оператори:</div>");
+echo (is_int($someInt)) ? 'is int' : 'is not int';
+
+// !Swith/case
+echo("<div class='playground__header'>Swith/case:</div>");
+
+switch($someInt){
+  case 1: 
+    echo(1);
+    break;
+  case 2: 
+    echo(2);
+    break;
+  default:
+    echo('empty');
+    break;
+}
+echo("<br>");
+
+// !Match
+echo("<div class='playground__header'>Match:</div>");
+echo match ($someInt) {
+  1 => 'is 1',
+  2 => 'is 2',
+  default => 'is empty'
+}
+
 ?>
-
-
 </div>
 </div>
 </main>
