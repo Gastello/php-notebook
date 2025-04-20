@@ -8,14 +8,7 @@
 </head>
 <body>
 <div class="wrapper">
-<header>
-    <div class="container">
-        <ul class="header">
-            <li><a href="index.php">PHP Notebook</a></li>
-            <li><a href="playground.php">Playground</a></li>
-        </ul>
-    </div>
-</header>
+  <?php include_once './header.php' ?>
 <main class="page">
 <div class="container">  
 
@@ -425,6 +418,26 @@ foreach($fruits as $key => $value){
 }
 echo("<br>");
 
+// !include/require
+echo("<div class='playground__header'>include/require:</div>");
+include './test.php';
+$testData = 'test2';
+echo $testData . "<br>";
+include './test.php';
+echo $testData . "<br>";
+
+// !Функції
+echo("<div class='playground__header'>Функції:</div>");
+function greet($name="Guest"){
+  echo("Hello, {$name}!") . "<br>";
+}
+greet();
+greet('Andrew');
+
+function minusFive($number){
+  return $number - 5;
+}
+echo minusFive(6) . "<br>";
 ?>
 </div>
 </div>
