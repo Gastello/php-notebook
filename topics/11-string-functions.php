@@ -52,13 +52,9 @@
         <span class="attention">'&lt;strong&gt;I am hacker!&lt;/strong&gt;' (length=29)</span> <br> <br>
     </p>
     <p>
-        <span class="accordion-menu__item-header">str</span>
-        <span class="code">htmlspecialchars_decode</span> - перетворює HTML-сутності в спеціальні символи.<br> <br>
-        <span class="code">
-        $someStr = "&amp;lt;strong&amp;gt;I am hacker!&amp;lt;/strong&amp;gt;"; <br>
-        var_dump(htmlspecialchars_decode($someStr));
-        </span>, результат: 
-        <span class="attention">'&lt;strong&gt;I am hacker!&lt;/strong&gt;' (length=29)</span> <br> <br>
+        <span class="accordion-menu__item-header">str_replace</span>
+        <span class="code">str_replace</span> - перетворює HTML-сутності в спеціальні символи.<br> <br>
+        
     </p>
     &ensp;&ensp;
 </div>
