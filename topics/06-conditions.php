@@ -1,6 +1,7 @@
 <div class="accordion-menu__item">Умовні оператори</div>
 <div class="accordion-menu__item-text hidden">
     <span class="accordion-menu__item-header">If/else</span>
+    <p><span class="code">$someInt = 2;</span></p>
     <p>
         Умова 'if/elseif/else' записується так <span class="code">if($someInt == 2){
         echo("Integer = 2");
@@ -53,7 +54,7 @@
     <p>
         Записуємо таким чином: 
         <span class="code"> 
-            switch($someInt){
+            switch($someInt){ <br>
             case 1: <br>
             &ensp;&ensp;echo(1); <br>
             &ensp;&ensp;break; <br>

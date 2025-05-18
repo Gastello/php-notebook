@@ -45,4 +45,21 @@
                 greet();
             </span>, виведе: <span class="attention">Hello, Guest!</span>
         </p>
+        <p>
+    <span class="accordion-menu__item-header">Функції з return</span>  
+        Функція може повертати значення за допомогою ключового слова <code>return</code>. <br><br>
+
+        Це дозволяє зберігати результат виконання функції та використовувати його пізніше. <br><br>
+
+        Приклад: <br>
+
+        <span class="code">
+            function sum($a, $b) { <br>
+                &ensp;&ensp;return $a + $b; <br>
+            } <br>
+            $result = sum(3, 5); <br>
+            echo $result;
+        </span>, виведе: <span class="attention">8</span>
+    </p>
+
 </div>

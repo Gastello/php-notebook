@@ -438,6 +438,27 @@ function minusFive($number){
   return $number - 5;
 }
 echo minusFive(6) . "<br>";
+
+// !Функції для роботи з рядками
+echo("<div class='playground__header'>Функції для роботи з рядками:</div>");
+$someStr = " Hello, man!  ";
+var_dump($someStr);
+var_dump(trim($someStr));
+var_dump(ltrim($someStr));
+var_dump(rtrim($someStr));
+var_dump(rtrim($someStr, '! '));
+$someStr = "123text908";
+var_dump(trim($someStr,'0..9'));
+
+$someStr = "<strong>I am hacker!</strong>";
+var_dump($someStr);
+var_dump(strip_tags($someStr));
+
+var_dump($someStr);
+var_dump(htmlspecialchars($someStr));
+
+$someStr = "&lt;strong&gt;I am hacker!&lt;/strong&gt;";
+var_dump(htmlspecialchars_decode($someStr));
 ?>
 </div>
 </div>

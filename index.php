@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- http://localhost/php-notebook/ -->
 <div class="wrapper">
     <?php include_once './header.php' ?>
     <main class="page">
@@ -41,6 +42,9 @@
                 </li>
                 <li>
                     <?php include './topics/10-functions.php' ?>    
+                </li>
+                <li>
+                    <?php include './topics/11-string-functions.php' ?>
                 </li>
             </ul>
         </div>
