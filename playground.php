@@ -459,6 +459,55 @@ var_dump(htmlspecialchars($someStr));
 
 $someStr = "&lt;strong&gt;I am hacker!&lt;/strong&gt;";
 var_dump(htmlspecialchars_decode($someStr));
+
+$someStr = "[b]BB CODE?[/b]";
+$someStr = str_replace('[b]', '<b>', $someStr);
+$someStr = str_replace('[/b]', '</b>', $someStr);
+var_dump($someStr);
+
+$someStr = "[b]BB CODE?[/b]";
+$bbCode = ['[b]','[/b]'];
+$htmlCode = ['<b>','</b>'];
+var_dump(str_replace($bbCode, $htmlCode, $someStr));
+
+$someStr = "hello, world!";
+var_dump(strtoupper($someStr));
+
+
+$someStr = "HELLO, WORLD!";
+var_dump(strtolower($someStr));
+
+$someStr = "12345678";
+var_dump(strlen($someStr));
+
+$someStr = "Привіт!";
+var_dump(strlen($someStr));
+var_dump(mb_strlen($someStr));
+
+$someStr = "01234567";
+var_dump(strpos($someStr, '5'));
+
+$someStr = "qweйцу";
+var_dump(strpos($someStr, 'ц'));
+var_dump(mb_strpos($someStr, 'ц'));
+
+$someStr = "Hello, world!";
+var_dump(substr($someStr, 7));
+var_dump(substr($someStr, 7, 3));
+
+// !Функції для роботи з датою та часом
+echo("<div class='playground__header'>Функції для роботи з датою та часом:</div>");
+echo date("d.m.Y H:i:s") . "<br>";
+
+echo time() . "<br>";
+
+echo date("d.m.Y H:i:s", time()) . "<br>";
+
+date_default_timezone_set('Europe/Kyiv');
+echo date("d.m.Y H:i:s") . "<br>";
+
+echo microtime() . "<br>";
+
 ?>
 </div>
 </div>

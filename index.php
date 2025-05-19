@@ -46,6 +46,9 @@
                 <li>
                     <?php include './topics/11-string-functions.php' ?>
                 </li>
+                <li>
+                    <?php include './topics/12-date-functions.php' ?>
+                </li>
             </ul>
         </div>
     </main>
