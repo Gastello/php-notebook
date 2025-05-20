@@ -508,6 +508,63 @@ echo date("d.m.Y H:i:s") . "<br>";
 
 echo microtime() . "<br>";
 
+// !HTTP запити в формах
+echo("<div class='playground__header'>HTTP запити в формах:</div>");
+echo "Вписавши в адресу такі значення: http://localhost/php-notebook/playground.php?test=hello%20world" . "<br>";
+echo('Отримаємо: ');
+print_r($_GET);
+echo '<br>';
+
+echo('<br>
+<form method="GET" action="">
+  <span>method="GET"</span><br>
+  <input type="text" name="name"><br><br>
+  <input type="text" name="surname"><br><br>
+  <input type="number" name="age"><br><br>
+  <button type="submit">Send</button>
+</form>
+' );
+print_r($_GET);
+
+echo '<br>';
+
+echo('<br>
+<form method="POST" action="">
+  <span>method="POST"</span><br>
+  <input type="password" name="password"><br><br>
+  <button type="submit">Send</button>
+</form>
+' );
+print_r($_POST);
+// $pass = $_POST["password"]; // помилка ( ! ) Warning: Undefined array key "password"
+$pass = $_POST["password"] ?? '';
+var_dump($pass);
+
+echo('<br>
+<form method="POST" action="test.php">
+  <span>action:</span><br>
+  <input type="text" name="name">
+  <button type="submit">Send</button>
+</form>
+' );
+print_r($_GET);
+
+echo '<br>';
+
+echo('<br>
+<form method="POST">
+  <span>Multiple choice:</span><br>
+  <select name="choices[]" multiple>
+    <option>number 1</option>
+    <option>number 2</option>
+    <option>number 3</option>
+  </select>
+  <button type="submit">Send</button>
+</form>
+' );
+print_r($_POST);
+
+echo '<br>';
 ?>
 </div>
 </div>

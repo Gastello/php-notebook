@@ -1,5 +1,5 @@
     <div class="accordion-menu__item">Функції для роботи з датою та часом</div>
-<div class="accordion-menu__item-text">
+<div class="accordion-menu__item-text hidden">
 <p>
         <span class="accordion-menu__item-header">Документація</span>
         <a href='https://www.php.net/manual/uk/datetime.formats.php'>Документацію по функціям для роботи з датою та часом можна знайти тут.</a>

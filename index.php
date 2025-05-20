@@ -49,6 +49,9 @@
                 <li>
                     <?php include './topics/12-date-functions.php' ?>
                 </li>
+                <li>
+                    <?php include './topics/13-http-requests.php' ?>
+                </li>
             </ul>
         </div>
     </main>
