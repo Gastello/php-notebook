@@ -565,6 +565,42 @@ echo('<br>
 print_r($_POST);
 
 echo '<br>';
+
+// !Файли та функції для роботи з файлами
+echo("<div class='playground__header'>Файли та функції для роботи з файлами:</div>");
+echo('<br>
+<form method="POST" enctype="multipart/form-data">
+  <span>File:</span><br>
+  <input type="file" name="file"></input>
+  <button type="submit">Send</button>
+</form>
+' );
+
+if(!empty($_FILES)){
+  move_uploaded_file($_FILES['file']['tmp_name'], 'files/'.$_FILES['file']['name']);
+}
+
+var_dump(file_exists('./files/blank.png'));
+
+if(file_exists('./files/blank.png')){
+  // rename('./files/blank.png', './files/newname.png');
+}
+
+// mkdir('test');  
+// rmdir('test');
+
+// copy('./topics/00-template.php', './files/template.php')
+// unlink('./files/template.php');
+
+var_dump(is_dir('./files'));
+var_dump(is_file('./files/newname.png'));
+
+var_dump(file_get_contents('./test.txt'));
+var_dump(file('./test.txt'));
+
+file_put_contents('./test.txt', "\nnew line", FILE_APPEND);
+
+var_dump(filesize('./playground.php'));
 ?>
 </div>
 </div>

@@ -52,6 +52,9 @@
                 <li>
                     <?php include './topics/13-http-requests.php' ?>
                 </li>
+                <li>
+                    <?php include './topics/14-files.php' ?>
+                </li>
             </ul>
         </div>
     </main>
